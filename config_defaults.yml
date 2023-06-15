@@ -542,6 +542,11 @@ Gemfile:
       - gem: 'puppet_litmus'
         version: 
         - '~> 1.0'
+        condition: "Gem::Requirement.create(['>= 3.0.0', '< 4.0.0']).satisfied_by?(Gem::Version.new(RUBY_VERSION.dup))"
+      - gem: 'puppet_litmus'
+        version: 
+        - '~> 0.36'
+        condition: "Gem::Requirement.create(['>= 2.7.0', '< 3.0.0']).satisfied_by?(Gem::Version.new(RUBY_VERSION.dup))"
         platforms: 
           - ruby
           - x64_mingw
