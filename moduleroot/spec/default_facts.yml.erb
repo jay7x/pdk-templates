@@ -6,6 +6,8 @@ networking:
     ip: "<%= @configs['networking']['ip'] %>"
     ip6: "<%= @configs['networking']['ip6'] %>"
     mac: "<%= @configs['networking']['mac'] %>"
+    <% if @configs['networking']['fqdn'] -%>fqdn: "<%= @configs['networking']['fqdn'] %>" <% end -%>
+
 is_pe: <%= @configs['is_pe'] %>
 <% if !@configs['extra_facts'].nil? -%>
 <% require 'yaml' -%>
